@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Search View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="MVPSearchViewController" customModule="MVPSample" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="LGz-3p-QER" userLabel="HeaderView">
+                                <rect key="frame" x="8" y="52" width="398" height="48"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="fY0-om-N9w">
+                                        <rect key="frame" x="0.0" y="0.0" width="398" height="48"/>
+                                        <subviews>
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Flk-DW-Vee">
+                                                <rect key="frame" x="0.0" y="0.0" width="362" height="48"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                            </textField>
+                                            <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SzF-CK-lkg">
+                                                <rect key="frame" x="378" y="0.0" width="20" height="48"/>
+                                                <state key="normal" image="magnifyingglass" catalog="system"/>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="fY0-om-N9w" secondAttribute="bottom" id="S63-Pw-Yid"/>
+                                    <constraint firstItem="fY0-om-N9w" firstAttribute="leading" secondItem="LGz-3p-QER" secondAttribute="leading" id="VF9-2C-3XN"/>
+                                    <constraint firstAttribute="trailing" secondItem="fY0-om-N9w" secondAttribute="trailing" id="ZB4-Qf-2JA"/>
+                                    <constraint firstItem="fY0-om-N9w" firstAttribute="top" secondItem="LGz-3p-QER" secondAttribute="top" id="aPP-eF-FRo"/>
+                                    <constraint firstAttribute="height" constant="48" id="u2i-0s-SoK"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Twa-cA-xyw" userLabel="BodyView">
+                                <rect key="frame" x="0.0" y="100" width="414" height="762"/>
+                                <subviews>
+                                    <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="medium" id="Sk5-to-MHM">
+                                        <rect key="frame" x="0.0" y="359" width="414" height="44"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    </activityIndicatorView>
+                                    <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="RWw-qS-R7I">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="762"/>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                    </tableView>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="RWw-qS-R7I" secondAttribute="trailing" id="Gl4-VU-ZAj"/>
+                                    <constraint firstItem="RWw-qS-R7I" firstAttribute="leading" secondItem="Twa-cA-xyw" secondAttribute="leading" id="P2T-2A-8mg"/>
+                                    <constraint firstItem="RWw-qS-R7I" firstAttribute="top" secondItem="Twa-cA-xyw" secondAttribute="top" id="aXN-lU-Izn"/>
+                                    <constraint firstAttribute="bottom" secondItem="RWw-qS-R7I" secondAttribute="bottom" id="lhC-g2-she"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Twa-cA-xyw" secondAttribute="trailing" id="NVT-ad-qiE"/>
+                            <constraint firstItem="Twa-cA-xyw" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="ORe-47-yq9"/>
+                            <constraint firstItem="Twa-cA-xyw" firstAttribute="top" secondItem="LGz-3p-QER" secondAttribute="bottom" id="YJ7-CW-h6t"/>
+                            <constraint firstItem="LGz-3p-QER" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="8" id="Ybm-ck-Jjs"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="Twa-cA-xyw" secondAttribute="bottom" id="epr-JE-AEL"/>
+                            <constraint firstItem="LGz-3p-QER" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="8" id="mg3-uy-yPl"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="LGz-3p-QER" secondAttribute="trailing" constant="8" id="vYH-Va-9uR"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="indicator" destination="Sk5-to-MHM" id="zyv-o7-RAZ"/>
+                        <outlet property="searchButton" destination="SzF-CK-lkg" id="N6B-0c-Bka"/>
+                        <outlet property="searchTextField" destination="Flk-DW-Vee" id="jf8-Du-bZd"/>
+                        <outlet property="tableView" destination="RWw-qS-R7I" id="DOK-Ab-KiA"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="137.68115942028987" y="94.419642857142847"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="magnifyingglass" catalog="system" width="128" height="115"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
