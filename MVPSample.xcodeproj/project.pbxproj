@@ -19,6 +19,11 @@
 		C586D3C62627DBC8007A76F1 /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = C586D3C52627DBC8007A76F1 /* Router.swift */; };
 		C586D3CB2627DD31007A76F1 /* MVPSearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C586D3CA2627DD31007A76F1 /* MVPSearchViewController.swift */; };
 		C586D3D52627DDB9007A76F1 /* MVPSearchPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = C586D3D42627DDB9007A76F1 /* MVPSearchPresenter.swift */; };
+		C586D47E262807C8007A76F1 /* MVPTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C586D47C262807C8007A76F1 /* MVPTableViewCell.swift */; };
+		C586D47F262807C8007A76F1 /* MVPTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C586D47D262807C8007A76F1 /* MVPTableViewCell.xib */; };
+		C586D48D26282900007A76F1 /* Web.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C586D48C26282900007A76F1 /* Web.storyboard */; };
+		C586D49226282930007A76F1 /* WebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C586D49126282930007A76F1 /* WebViewController.swift */; };
+		C586D49726282975007A76F1 /* WebPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = C586D49626282975007A76F1 /* WebPresenter.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,6 +62,11 @@
 		C586D3C52627DBC8007A76F1 /* Router.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
 		C586D3CA2627DD31007A76F1 /* MVPSearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MVPSearchViewController.swift; sourceTree = "<group>"; };
 		C586D3D42627DDB9007A76F1 /* MVPSearchPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MVPSearchPresenter.swift; sourceTree = "<group>"; };
+		C586D47C262807C8007A76F1 /* MVPTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MVPTableViewCell.swift; sourceTree = "<group>"; };
+		C586D47D262807C8007A76F1 /* MVPTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MVPTableViewCell.xib; sourceTree = "<group>"; };
+		C586D48C26282900007A76F1 /* Web.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Web.storyboard; sourceTree = "<group>"; };
+		C586D49126282930007A76F1 /* WebViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebViewController.swift; sourceTree = "<group>"; };
+		C586D49626282975007A76F1 /* WebPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebPresenter.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -110,6 +120,7 @@
 				C586D3C12627DB63007A76F1 /* Router */,
 				C586D3B22627D461007A76F1 /* Model */,
 				C586D3C02627DB2E007A76F1 /* Search */,
+				C586D48626281630007A76F1 /* Web */,
 				C586D37F2627D403007A76F1 /* AppDelegate.swift */,
 				C586D3832627D403007A76F1 /* ViewController.swift */,
 				C586D3882627D404007A76F1 /* Assets.xcassets */,
@@ -151,6 +162,7 @@
 			children = (
 				C586D3D22627DD99007A76F1 /* Presenter */,
 				C586D3DC2627E039007A76F1 /* Controller */,
+				C586D47B262807A3007A76F1 /* View */,
 			);
 			path = Search;
 			sourceTree = "<group>";
@@ -178,6 +190,41 @@
 				C586D3852627D403007A76F1 /* MVPSearch.storyboard */,
 			);
 			path = Controller;
+			sourceTree = "<group>";
+		};
+		C586D47B262807A3007A76F1 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				C586D47C262807C8007A76F1 /* MVPTableViewCell.swift */,
+				C586D47D262807C8007A76F1 /* MVPTableViewCell.xib */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		C586D48626281630007A76F1 /* Web */ = {
+			isa = PBXGroup;
+			children = (
+				C586D48826281651007A76F1 /* Presenter */,
+				C586D48726281644007A76F1 /* Controller */,
+			);
+			path = Web;
+			sourceTree = "<group>";
+		};
+		C586D48726281644007A76F1 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				C586D49126282930007A76F1 /* WebViewController.swift */,
+				C586D48C26282900007A76F1 /* Web.storyboard */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		C586D48826281651007A76F1 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				C586D49626282975007A76F1 /* WebPresenter.swift */,
+			);
+			path = Presenter;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -285,7 +332,9 @@
 			files = (
 				C586D38C2627D404007A76F1 /* LaunchScreen.storyboard in Resources */,
 				C586D3892627D404007A76F1 /* Assets.xcassets in Resources */,
+				C586D48D26282900007A76F1 /* Web.storyboard in Resources */,
 				C586D3872627D403007A76F1 /* MVPSearch.storyboard in Resources */,
+				C586D47F262807C8007A76F1 /* MVPTableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -311,12 +360,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				C586D3B42627D46D007A76F1 /* GithubModel.swift in Sources */,
+				C586D49226282930007A76F1 /* WebViewController.swift in Sources */,
 				C586D3CB2627DD31007A76F1 /* MVPSearchViewController.swift in Sources */,
+				C586D49726282975007A76F1 /* WebPresenter.swift in Sources */,
 				C586D3BC2627D585007A76F1 /* GithubAPI.swift in Sources */,
 				C586D3842627D403007A76F1 /* ViewController.swift in Sources */,
 				C586D3D52627DDB9007A76F1 /* MVPSearchPresenter.swift in Sources */,
 				C586D3802627D403007A76F1 /* AppDelegate.swift in Sources */,
 				C586D3C62627DBC8007A76F1 /* Router.swift in Sources */,
+				C586D47E262807C8007A76F1 /* MVPTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

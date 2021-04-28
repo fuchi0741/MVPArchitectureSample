@@ -20,15 +20,19 @@
                                 <rect key="frame" x="8" y="52" width="398" height="48"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="fY0-om-N9w">
-                                        <rect key="frame" x="0.0" y="0.0" width="398" height="48"/>
+                                        <rect key="frame" x="8" y="0.0" width="382" height="48"/>
                                         <subviews>
                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Flk-DW-Vee">
-                                                <rect key="frame" x="0.0" y="0.0" width="362" height="48"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="346" height="48"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits"/>
                                             </textField>
                                             <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SzF-CK-lkg">
-                                                <rect key="frame" x="378" y="0.0" width="20" height="48"/>
+                                                <rect key="frame" x="362" y="0.0" width="20" height="48"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="20" id="Wze-Pi-eGV"/>
+                                                    <constraint firstAttribute="width" secondItem="SzF-CK-lkg" secondAttribute="height" multiplier="5:12" id="wEO-nk-aED"/>
+                                                </constraints>
                                                 <state key="normal" image="magnifyingglass" catalog="system"/>
                                             </button>
                                         </subviews>
@@ -37,10 +41,9 @@
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <constraints>
                                     <constraint firstAttribute="bottom" secondItem="fY0-om-N9w" secondAttribute="bottom" id="S63-Pw-Yid"/>
-                                    <constraint firstItem="fY0-om-N9w" firstAttribute="leading" secondItem="LGz-3p-QER" secondAttribute="leading" id="VF9-2C-3XN"/>
-                                    <constraint firstAttribute="trailing" secondItem="fY0-om-N9w" secondAttribute="trailing" id="ZB4-Qf-2JA"/>
+                                    <constraint firstItem="fY0-om-N9w" firstAttribute="leading" secondItem="LGz-3p-QER" secondAttribute="leading" constant="8" id="VF9-2C-3XN"/>
+                                    <constraint firstAttribute="trailing" secondItem="fY0-om-N9w" secondAttribute="trailing" constant="8" id="ZB4-Qf-2JA"/>
                                     <constraint firstItem="fY0-om-N9w" firstAttribute="top" secondItem="LGz-3p-QER" secondAttribute="top" id="aPP-eF-FRo"/>
-                                    <constraint firstAttribute="height" constant="48" id="u2i-0s-SoK"/>
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Twa-cA-xyw" userLabel="BodyView">

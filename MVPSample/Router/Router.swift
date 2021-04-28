@@ -28,4 +28,23 @@ final class Router {
         window.makeKeyAndVisible()
         self.window = window
     }
+    
+    func showWeb(from :UIViewController, githubModel :GithubModel) {
+        guard let web = UIStoryboard.init(name: "Web", bundle: nil).instantiateInitialViewController() as? WebViewController else {
+            return
+        }
+        
+        let presenter = WebPresenter(output: web, githubModel: githubModel)
+        web.inject(presenter: presenter)
+        show(from: from, to: web)
+    }
+    
+    private func show(from: UIViewController, to: UIViewController, completion: (() -> Void)? = nil) {
+        if let nav = from.navigationController {
+            nav.pushViewController(to, animated: true)
+            completion?()
+        } else {
+            from.present(to, animated: true, completion: completion)
+        }
+    }
 }
